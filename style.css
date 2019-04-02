@@ -8,7 +8,7 @@
 
 body{
   background:#e8f5ff;
-  padding:75px;
+  padding:40px;
   text-align:center;
   font-family: 'Oswald', sans-serif;
   font-size: 18px;
@@ -17,6 +17,11 @@ body{
 h1{
   color:#747474;
   font-weight:100;
+  letter-spacing: 10px;
+}
+
+h3{
+    letter-spacing: 3px;
 }
 
 .btn{
@@ -55,4 +60,16 @@ h1{
   width:210px;
   margin:auto;
   margin-top:50px;
+}
+
+.body-box{
+    border:1px solid rgb(100, 100, 100);
+    background: #fff;
+    width: 700px;
+    margin: auto;
+}
+
+p{
+    text-align: left;
+    padding: 30px;
 }
