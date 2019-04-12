@@ -1,23 +1,15 @@
-/** {
-	-webkit-transition-property: all;
-	-webkit-transition-duration: .2s;
-  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
-	-moz-transition-property: all;
-  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
-}*/
-
 body{
-  background:#e8f5ff;
-  padding:40px;
-  text-align:center;
-  font-family: 'Oswald', sans-serif;
-  font-size: 18px;
+    background:#d8eeff;
+    padding:40px;
+    text-align:center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
 }
 
 h1{
-  color:#747474;
-  font-weight:100;
-  letter-spacing: 10px;
+    color:#747474;
+    font-weight:100;
+    letter-spacing: 10px;
 }
 
 h3{
@@ -25,45 +17,45 @@ h3{
 }
 
 .btn{
-  color:rgb(255, 255, 255);
-  background:rgba(0, 0, 0, 0.705);
-  padding:10px 20px;
-  font-size:16px;
-  text-decoration:none;
-  letter-spacing:2px;
-  text-transform:uppercase;
+    color:rgb(255, 255, 255);
+    background:rgba(0, 0, 0, 0.705);
+    padding:10px 20px;
+    font-size:16px;
+    text-decoration:none;
+    letter-spacing:2px;
+    text-transform:uppercase;
 }
 
 .btn:hover{
-  border:none;
-  background:rgba(0, 0, 0, 0.4);
-  background:#fff;
-  padding:20px 20px; #000;
-  color:#1b1b1b;
+    border:none;
+    background:rgba(0, 0, 0, 0.4);
+    background:#fff;
+    padding:20px 20px;
+    color:#1b1b1b;
 }
 
 .btn-submit{
-  color:rgb(255, 255, 255);
-  background:rgba(0, 0, 0, 0.582);
-  padding:5px 10px;
+    color:rgb(255, 255, 255);
+    background:rgba(0, 0, 0, 0.582);
+    padding:5px 10px;
 }
 
 .footer{
-  font-size:9.5px;
-  color:rgb(100, 100, 100);
-  clear:both;
-  display:block;
-  letter-spacing:5px;
-  border:1px solid rgb(100, 100, 100);
-  padding:5px;
-  text-decoration:none;
-  width:210px;
-  margin:auto;
-  margin-top:50px;
+    font-size:9.5px;
+    color:rgb(100, 100, 100);
+    clear:both;
+    display:block;
+    letter-spacing:4px;
+    border:1px solid rgb(100, 100, 100);
+    padding:5px;
+    text-decoration:none;
+    width:300px;
+    margin:auto;
+    margin-top:50px;
 }
 
 .body-box{
-    border:1px solid rgb(100, 100, 100);
+    border:1.5px solid rgb(100, 100, 100);
     background: #fff;
     width: 700px;
     margin: auto;
