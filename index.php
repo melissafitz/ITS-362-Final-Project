@@ -2,11 +2,6 @@
     include('header.html');
 ?>
 
-<!DOCTYPE html>
-
-<html>
-
-<body>
     <br />
     <div id="order" class="body-box">
         <h3>Place an Order</h3>
