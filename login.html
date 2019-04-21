@@ -4,22 +4,15 @@
     require(MYSQL);
 ?>
 
-<!DOCTYPE html>
-
-<html>
-
-<body>
     <h4> Login </h4>
+
+    <p>Please enter your credentials.</p>
 
     <form action="index.php" method="POST">
         <label>Email: </label> <input type="text" name="email"/><br/>
         <label>Password: </label> <input type="text" name="password"/><br/>
         <input type="submit" value=" Login "/>
     </form>
-</body>
-
-</html>
 
 <?php
     include('footer.html');
-?>

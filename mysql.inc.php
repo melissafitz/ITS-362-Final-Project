@@ -21,11 +21,12 @@
         die("Connection failed.")
     } else {}
 
+    /* CHARACTER SET */
+    mysqli_set_charset($dbc, 'utf8');
+
     /* HASH PASSWORDS */
     function get_password_hash($password) {
         return hash_mac('sha256', $password, 'c#haR1891', true);
     }
     
     //$orderDB->close();
-
-?>

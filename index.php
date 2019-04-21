@@ -13,6 +13,38 @@
             Placerat vestibulum lectus mauris ultrices eros in cursus turpis. Elit eget gravida cum sociis natoque
             penatibus. Purus sit amet volutpat consequat mauris nunc congue nisi. Sed ullamcorper morbi tincidunt ornare
             massa eget egestas purus viverra. Eu nisl nunc mi ipsum faucibus.</p>
+
+            <div id="tabs-1">
+                <ul>
+                    <li><a href="#tabs-2">Combos</a></li>
+                    <li><a href="#tabs-3">Sides</a></li>
+                    <li><a href="#tabs-4">Drinks</a></li>
+                </ul>
+
+                <div id="tabs-2">
+                    <ul>
+                        <li>Hot dog, fries, & drink</li>
+                        <li>Cheeseburger, fries, & drink</li>
+                    </ul>
+                </div>
+
+                <div id="tabs-3">
+                    <ul>
+                        <li>French fries</li>
+                        <li>Tater tots</li>
+                        <li>Cole slaw</li>
+                    </ul>
+                </div>
+
+                <div id="tabs-4">
+                    <ul>
+                        <li>Coca-Cola</li>
+                        <li>Lemonade</li>
+                        <li>Iced tea</li>
+                        <li>Bottled water</li>
+                    </ul>
+                </div>
+            </div>
     </div>
     <br />
     <div id="about" class="body-box">
@@ -41,7 +73,7 @@
             <input type="text" placeholder="Name" size="35" /><br />
             <input type="text" placeholder="Email" size="35" /><br />
             <input type="text" placeholder="Message" size="35" /><br /><br />
-            <button type="submit" class="btn-submit">SEND</button>
+            <button type="submit" class="btn-submit"> SEND </button>
         </form>
         <br />
     </div>

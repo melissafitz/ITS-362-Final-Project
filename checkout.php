@@ -2,7 +2,6 @@
 
     require('config.inc.php');
 
-
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         if (isset($_GET['session'])) {
             $uid = $_GET['session'];
@@ -22,4 +21,10 @@
 
     require (MYSQL);
 
+
+    include('header.html');
+
+
+
+    include ('footer.html');
 ?>

@@ -53,4 +53,3 @@
 
 <?php
     include('footer.html');
-?>

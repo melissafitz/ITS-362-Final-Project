@@ -94,4 +94,3 @@
 
 <?php
     include('footer.html');
-?>

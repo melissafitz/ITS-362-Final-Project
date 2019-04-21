@@ -65,3 +65,14 @@ p{
     text-align: left;
     padding: 30px;
 }
+
+#tabs-1{
+    font-size: 14px;
+}
+
+.ui-widget-header {
+    background: white;
+    border: 1px solid gray;
+    color: black;
+    font-weight: bold;
+}
