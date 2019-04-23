@@ -1,10 +1,10 @@
 <?php
-
     // Initialize the session
     session_start();
+    require(MYSQL);
     
-    // Check if the user is already logged in,
-    // if yes then redirect to welcome page
+    // check if the user is already logged in,
+    // if yes then redirect to index page
     if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
         header("location: index.php");
     exit;
@@ -12,82 +12,42 @@
 
     require(config.inc.php);
 
-    $username = $password = "";
-
-    // Processing form data when form is submitted
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-    
-        // Check if username is empty
-        if(empty(trim($_POST["username"]))){
-            $username_err = "Please enter username.";
-        } else{
-        $username = mysqli_real_escape_string($username);
-        $username = stripslashes($username);
-            $username = trim($_POST["username"]);
-        } 
+    if($_SERVER["REQUEST_METHOD"] == "POST") { // username and password sent from form 
         
-        // Check if password is empty
-        if(empty(trim($_POST["password"]))){
-            $password_err = "Please enter your password.";
-        } else{
-        $password = mysqli_real_escape_string($password);
-        $password = stripslashes($password);
-            $password = trim($_POST["password"]);
+        $un = mysqli_real_escape_string($dbc,$_POST['username']);
+        $pw = mysqli_real_escape_string($dbc,$_POST['password']); 
+        
+        $sql = "SELECT UserID FROM Users WHERE username = '$un' and password = '$pw'";
+        $result = mysqli_query($dbc,$sql);
+        $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+        $active = $row['active'];
+        
+        $count = mysqli_num_rows($result);
+        
+        // If result matched $un and $pw, table row must be 1 row
+        if($count == 1) { //successful login
+           session_register("un");
+           $_SESSION['login_user'] = $un;
+           
+           //return to home
+           header("location: index.php");
+        }else { //failed login
+           $error = "Invalid credentials!";
         }
-        
-        // Validate credentials
-        if(empty($username_err) && empty($password_err)){
-            // Prepare a select statement
-            $sql = "SELECT id, username, password FROM users WHERE username = ?";
-            
-            if($stmt = mysqli_prepare($link, $sql)){
-                // Bind variables to the prepared statement as parameters
-                mysqli_stmt_bind_param($stmt, "s", $param_username);
-                
-                // Set parameters
-                $param_username = $username;
-                
-                // Attempt to execute the prepared statement
-                if(mysqli_stmt_execute($stmt)){
-                    // Store result
-                    mysqli_stmt_store_result($stmt);
-                    
-                    // Check if username exists, if yes then verify password
-                    if(mysqli_stmt_num_rows($stmt) == 1){                    
-                        // Bind result variables
-                        mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
-                        if(mysqli_stmt_fetch($stmt)){
-                            if(password_verify($password, $hashed_password)){
-                                // Password is correct, so start a new session
-                                session_start();
-                                
-                                // Store data in session variables
-                                $_SESSION["loggedin"] = true;
-                                $_SESSION["id"] = $id;
-                                $_SESSION["username"] = $username;                            
-                                
-                                // Redirect user to welcome page
-                                header("location: index.php");
-                            } else{
-                                // Display an error message if password is not valid
-                                $password_err = "The password you entered was not valid.";
-                            }
-                        }
-                    } else{
-                        // Display an error message if username doesn't exist
-                        $username_err = "No account found with that username.";
-                    }
-                } else{
-                    echo "Oops! Something went wrong. Please try again later.";
-                }
-            }
-            
-            // Close statement
-            mysqli_stmt_close($stmt);
-        }
-        
-        // Close connection
-        mysqli_close($link);
     }
-
 ?>
+
+<h4> Login </h4>
+
+    <div id="login" class="body-box">
+        <p>Please enter your credentials.</p>
+
+        <form action="index.php" method="POST">
+            <label>Email: </label> <input type="text" name="email"/><br/>
+            <label>Password: </label> <input type="text" name="password"/><br/>
+            <input type="submit" value=" Login "/>
+        </form>
+    </div>
+
+<?php
+    include('footer.html');
