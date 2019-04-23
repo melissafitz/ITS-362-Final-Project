@@ -91,6 +91,3 @@
     }
 
 ?>
-
-<?php
-    include('footer.html');

@@ -10,6 +10,7 @@
         $email = $_POST['email'];
         $user = $_POST['username'];
         $pass = $_POST['password'];
+        // success/fail messages
         $accountExists = 'Sorry, an account already exists with this email address.';
         $success = 'Awesome! Your account was successfully created.';
         $fail = 'There was an error. Please try again.';
@@ -18,7 +19,8 @@
         $r = mysqli_query($dbc, $q);
         $rows = mysqli_num_rows($r);
 
-        if ($rows == 0) {
+        if ($rows == 0) { //account does not already exist
+            //push registration info to DB
             $q = "INSERT INTO users (name, phone, email, username, password)
                   VALUES ('$name', '$phone', '$email', '$user', '$pass')";
             $r = mysqli_query($dbc, $q);
@@ -31,7 +33,7 @@
             } else {
                 echo $fail;
             }
-        } else {
+        } else { //account already exists
             echo $accountExists;
         }
     }

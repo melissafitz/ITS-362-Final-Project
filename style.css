@@ -1,3 +1,4 @@
+/* TEXT */
 body{
     background:#d8eeff;
     padding:40px;
@@ -5,17 +6,26 @@ body{
     font-family: 'Oswald', sans-serif;
     font-size: 18px;
 }
-
+p{
+    text-align: left;
+    padding: 30px;
+}
 h1{
     color:#747474;
     font-weight:100;
     letter-spacing: 10px;
 }
-
 h3{
     letter-spacing: 3px;
 }
 
+/* HEADER IMG */
+.headerimg{
+    width: fit-content;
+    height: 250px;
+}
+
+/* NAVBAR */
 .btn{
     color:rgb(255, 255, 255);
     background:rgba(0, 0, 0, 0.705);
@@ -25,7 +35,6 @@ h3{
     letter-spacing:2px;
     text-transform:uppercase;
 }
-
 .btn:hover{
     border:none;
     background:rgba(0, 0, 0, 0.4);
@@ -33,13 +42,13 @@ h3{
     padding:20px 20px;
     color:#1b1b1b;
 }
-
 .btn-submit{
     color:rgb(255, 255, 255);
     background:rgba(0, 0, 0, 0.582);
     padding:5px 10px;
 }
 
+/* FOOTER */
 .footer{
     font-size:9.5px;
     color:rgb(100, 100, 100);
@@ -54,6 +63,7 @@ h3{
     margin-top:50px;
 }
 
+/* CONTAINERS */
 .body-box{
     border:1.5px solid rgb(100, 100, 100);
     background: #fff;
@@ -61,16 +71,11 @@ h3{
     margin: auto;
 }
 
-p{
-    text-align: left;
-    padding: 30px;
-}
-
+/* MENU TABS */
 #tabs-1{
     font-size: 14px;
 }
-
-.ui-widget-header {
+.ui-widget-header { /*override jquery ui style*/
     background: white;
     border: 1px solid gray;
     color: black;

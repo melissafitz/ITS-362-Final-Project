@@ -20,11 +20,4 @@
     }
 
     require (MYSQL);
-
-
-    include('header.html');
-
-
-
-    include ('footer.html');
 ?>
