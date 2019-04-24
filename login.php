@@ -1,4 +1,27 @@
 <?php
+    include('header.html');
+?>
+
+<br/>
+    <div id="login" class="body-box">
+        <h4> Login </h4>
+        <p>Please enter your credentials.</p>
+
+        <form action="index.php" method="POST">
+            <label>Email: </label> <input type="text" name="email"/><br/>
+            <label>Password: </label> <input type="text" name="password"/><br/><br/>
+            <input type="submit" value=" Login "/>
+        </form><br/>
+    </div>
+
+<?php
+
+    include('footer.html');
+
+?>
+
+<?php
+
     // Initialize the session
     session_start();
     require(MYSQL);
@@ -7,7 +30,7 @@
     // if yes then redirect to index page
     if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
         header("location: index.php");
-    exit;
+        exit;
     }
 
     require(config.inc.php);
@@ -36,18 +59,3 @@
         }
     }
 ?>
-
-<h4> Login </h4>
-
-    <div id="login" class="body-box">
-        <p>Please enter your credentials.</p>
-
-        <form action="index.php" method="POST">
-            <label>Email: </label> <input type="text" name="email"/><br/>
-            <label>Password: </label> <input type="text" name="password"/><br/>
-            <input type="submit" value=" Login "/>
-        </form>
-    </div>
-
-<?php
-    include('footer.html');

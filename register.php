@@ -3,55 +3,32 @@
     include('header.html');
     require(MYSQL);
 
-    if (isset($_POST['submit'])) {
-        //echo $_POST['name'];
-        $name = $_POST['name'];
-        $phone = $_POST['phone'];
-        $email = $_POST['email'];
-        $user = $_POST['username'];
-        $pass = $_POST['password'];
-        // success/fail messages
-        $accountExists = 'Sorry, an account already exists with this email address.';
-        $success = 'Awesome! Your account was successfully created.';
-        $fail = 'There was an error. Please try again.';
+    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $un = $_POST['username'];
+        $pw = $_POST['password'];
+        $em = $_POST['email'];
 
-        $q = "SELECT email, username FROM users WHERE email = '$email'";
+        $q = "INSERT INTO `Users` (`username`, `password`, `email`) VALUES ('$un', '$pw', '$em')";
         $r = mysqli_query($dbc, $q);
-        $rows = mysqli_num_rows($r);
-
-        if ($rows == 0) { //account does not already exist
-            //push registration info to DB
-            $q = "INSERT INTO users (name, phone, email, username, password)
-                  VALUES ('$name', '$phone', '$email', '$user', '$pass')";
-            $r = mysqli_query($dbc, $q);
-
-            //check if it ran correctly
-            if (mysqli_affected_rows($dbc) == 1) {
-                echo $success;
-                include('footer.html');
-                exit();
-            } else {
-                echo $fail;
-            }
-        } else { //account already exists
-            echo $accountExists;
-        }
-    }
 ?>
 
+</br>
+<div id="registerForm" class="body-box">
 <h3> Register </h3>
 
-<form action="register.php" method="POST">
+<form action="register.php" action="register.php" method="POST">
 
-    <label>Name: </label><input type="text" name="name"/><br/>
-    <label>Phone number: </label><input type="text" name="phone"/><br/>
     <label>Email address: </label><input type="text" name="email"/><br/>
     <label>Username: </label><input type="text" name="username"/><br/>
-    <label>Password: </label><input type="text" name="password"/><br/>
+    <label>Password: </label><input type="text" name="password"/><br/><br/>
 
     <input type="submit" name="submit" value=" Register " id="submitbtn"/>
 
-</form>
+</form><br/>
+</div>
 
 <?php
+
     include('footer.html');
+
+?>
