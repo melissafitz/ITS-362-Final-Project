@@ -17,7 +17,7 @@
 <div class="body-box">
 <h3> Register </h3>
 
-<form action="register.php" method="POST">
+<form action="register.php" action="register.php" method="POST">
 
     <label>Email address: </label><input type="text" name="email"/><br/>
     <label>Username: </label><input type="text" name="username"/><br/>
