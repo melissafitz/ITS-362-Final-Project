@@ -18,35 +18,39 @@
 
                 <!-- COMBOS -->
                 <div id="tabs-2">
+                    <form id="menuForm1" method='POST' action='cart.php'>
                     <ul>
-                        <p>Hot dog, fries, & drink<br/>
-                           Cheeseburger, fries, & drink<br/>
-                           Fish tacos, slaw, & drink<br/>
-                           Veggie burger, fries, & drink</p>
+                        <p>Hot dog, fries, & drink &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button name="menuSubmit" type="submit" value="' . $row[0] . '">+</button><br/>
+                           Cheeseburger, fries, & drink &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button name="menuSubmit" type="submit" value="' . $row[0] . '">+</button><br/>
+                           Fish tacos, slaw, & drink &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button name="menuSubmit" type="submit" value="' . $row[0] . '">+</button><br/>
+                           Veggie burger, fries, & drink &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button name="menuSubmit" type="submit" value="' . $row[0] . '">+</button></p>
 
                         <p>Substitute fries with tater tots for an extra <strong>$0.25</strong>!</p>
                     </ul>
-
-                    
+                    </form>
                 </div>
 
                 <!-- SIDES -->
                 <div id="tabs-3">
+                    <form id="menuForm2" method='POST' action='cart.php'>
                     <ul>
-                        <p>French fries<br/>
-                           Tater tots<br/>
-                           Cole slaw</p>
+                        <p>French fries&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button name="menuSubmit" type="submit" value="' . $row[0] . '">+</button><br/>
+                           Tater tots&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button name="menuSubmit" type="submit" value="' . $row[0] . '">+</button><br/>
+                           Cole slaw&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button name="menuSubmit" type="submit" value="' . $row[0] . '">+</button></p>
                     </ul>
+                    </form>
                 </div>
 
                 <!-- DRINKS -->
                 <div id="tabs-4">
+                    <form id="menuForm3" method='POST' action='cart.php'>
                     <ul>
-                        <p>Coca-Cola<br/>
-                           Lemonade<br/>
-                           Iced tea<br/>
-                           Bottled water</p>
+                        <p>Coca-Cola&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button name="menuSubmit" type="submit" value="' . $row[0] . '">+</button><br/>
+                           Lemonade&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button name="menuSubmit" type="submit" value="' . $row[0] . '">+</button><br/>
+                           Iced tea&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button name="menuSubmit" type="submit" value="' . $row[0] . '">+</button><br/>
+                           Bottled water&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button name="menuSubmit" type="submit" value="' . $row[0] . '">+</button></p>
                     </ul>
+                    </form>
                 </div>
             </div>
     </div>
