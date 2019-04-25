@@ -73,7 +73,8 @@ h3{
 
 /* MENU TABS */
 #tabs-1{
-    font-size: 14px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
 }
 .ui-widget-header { /*override jquery ui style*/
     background: white;

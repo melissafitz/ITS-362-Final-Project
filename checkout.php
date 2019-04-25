@@ -1,5 +1,5 @@
 <?php
-
+    include('header.html');
     require('config.inc.php');
 
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
@@ -21,3 +21,9 @@
 
     require (MYSQL);
 ?>
+
+CHECKOUT HTML HERE
+
+<?php
+
+    include('footer.html');

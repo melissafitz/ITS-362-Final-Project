@@ -1,12 +1,4 @@
 <?php
-    /*$servername = "localhost";
-    $username = "root";
-    $password = "toor";
-    $dbname = "FoodOrder";
-
-    $orderDB = new mysqli($servername, $username, $password, $dbname);
-    $sql = "SELECT * FROM Orders";
-    $gradeDB->query($sql);*/
 
     DEFINE ('DB_USER', 'root');
     DEFINE ('DB_PASSWORD', 'toor');
@@ -15,14 +7,6 @@
 
     /* CONNECT TO DATABASE */
     $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-
-    /* IF CONNECTION FAILS */
-    if ($orderDB->connect_error) {
-        die("Connection failed.")
-    } else {}
-
-    /* CHARACTER SET */
-    mysqli_set_charset($dbc, 'utf8');
 
     /* HASH PASSWORDS */
     function get_password_hash($password) {

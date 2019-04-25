@@ -1,5 +1,5 @@
 <?php
-    include('header.html');
+    include('html/header.html');
 ?>
 
     <br />
@@ -19,31 +19,33 @@
                 <!-- COMBOS -->
                 <div id="tabs-2">
                     <ul>
-                        <li>Hot dog, fries, & drink</li>
-                        <li>Cheeseburger, fries, & drink</li>
-                        <li>Fish tacos, slaw, & drink</li>
-                        <li>Veggie burger, fries, & drink</li>
+                        <p>Hot dog, fries, & drink<br/>
+                           Cheeseburger, fries, & drink<br/>
+                           Fish tacos, slaw, & drink<br/>
+                           Veggie burger, fries, & drink</p>
+
+                        <p>Substitute fries with tater tots for an extra <strong>$0.25</strong>!</p>
                     </ul>
 
-                    <p>Substitute fries with tater tots for an extra <strong>$0.25</strong>!</p>
+                    
                 </div>
 
                 <!-- SIDES -->
                 <div id="tabs-3">
                     <ul>
-                        <li>French fries</li>
-                        <li>Tater tots</li>
-                        <li>Cole slaw</li>
+                        <p>French fries<br/>
+                           Tater tots<br/>
+                           Cole slaw</p>
                     </ul>
                 </div>
 
                 <!-- DRINKS -->
                 <div id="tabs-4">
                     <ul>
-                        <li>Coca-Cola</li>
-                        <li>Lemonade</li>
-                        <li>Iced tea</li>
-                        <li>Bottled water</li>
+                        <p>Coca-Cola<br/>
+                           Lemonade<br/>
+                           Iced tea<br/>
+                           Bottled water</p>
                     </ul>
                 </div>
             </div>
@@ -62,14 +64,14 @@
         <p>Customer satisfaction is our #1 priority!
             Let us know what we're doing right or what we could improve on.</p>
 
-        <form>
+        <form action="index.php">
             <input type="text" placeholder="Name" size="35" /><br />
             <input type="text" placeholder="Email" size="35" /><br />
-            <input type="text" placeholder="Message" size="35" /><br /><br />
+            <input type="text" placeholder="Message" size="35" style="height:100px" /><br /><br />
             <button type="submit" class="btn-submit"> SEND </button>
         </form>
         <br />
     </div>
 
 <?php
-    include('footer.html');
+    include('html/footer.html');
